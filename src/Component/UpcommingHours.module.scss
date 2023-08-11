@@ -1,0 +1,59 @@
+.container {
+  background-color: white;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  p {
+    font-size: 15px;
+  }
+}
+
+.options {
+  display: flex;
+  gap: 20px;
+
+  select {
+    height: 30px;
+    width: 150px;
+    padding: 0 10px;
+    border-radius: 10px;
+  }
+}
+
+.chartContainer {
+  padding: 0 25px;
+}
+.button {
+  height: 30px;
+  width: 100px;
+  border-radius: 10px;
+}
+
+.data-container {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 14px;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 13.5%;
+}
+
+.data {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  justify-content: center;
+  align-items: center;
+  p {
+    font-size: 10px;
+  }
+
+  svg {
+    font-size: 10px;
+  }
+}
