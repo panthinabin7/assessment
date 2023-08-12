@@ -81,6 +81,29 @@ const UpcommingHours = () => {
           </div>
         </div>
         <LineChart chartData={chartData} />
+        <div className={classes["degree-container"]}>
+          <div className={classes.degree}>
+            <p>27</p>
+          </div>
+          <div className={classes.degree}>
+            <p>27</p>
+          </div>
+          <div className={classes.degree}>
+            <p>27</p>
+          </div>
+          <div className={classes.degree}>
+            <p>27</p>
+          </div>
+          <div className={classes.degree}>
+            <p>27</p>
+          </div>
+          <div className={classes.degree}>
+            <p>27</p>
+          </div>
+          <div className={classes.degree}>
+            <p>27</p>
+          </div>
+        </div>
       </div>
     </div>
   );
