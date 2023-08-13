@@ -2,16 +2,21 @@
   background-color: rgb(193, 193, 233);
   margin-left: -40px;
   border-radius: 25px;
-  padding: 20px 15px;
+  padding: 25px 35px;
   width: 100vh;
-}
+  z-index: 3;
 
-.title {
-  p {
-    line-height: 0;
+  .title {
+    padding-bottom: 20px;
+    h3 {
+      font-weight: 500;
+    }
+    p {
+      line-height: 0;
+      font-weight: 400;
+    }
   }
-}
-
-.upcomming {
-  border-radius: 20px;
+  .upcomming {
+    border-radius: 20px;
+  }
 }

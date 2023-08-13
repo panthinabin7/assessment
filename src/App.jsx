@@ -1,10 +1,12 @@
 import "./App.css";
-import Weather from "./Component/Weather";
+import Left from "./Component/Left";
+import Right from "./Component/Right";
 
 function App() {
   return (
-    <div>
-      <Weather />
+    <div className="app">
+      <Left />
+      <Right />
     </div>
   );
 }

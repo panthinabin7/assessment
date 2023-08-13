@@ -11,11 +11,11 @@ Chart.register(CategoryScale);
 
 const UpcommingHours = () => {
   const [chartData, setChartData] = useState({
-    labels: Data.map((data) => data.year),
+    labels: Data.map((data) => data),
     datasets: [
       {
         label: "Users Gained ",
-        data: Data.map((data) => data.userGain),
+        data: Data.map((data) => data.time),
         backgroundColor: [
           "rgba(75,192,192,1)",
 
@@ -44,65 +44,21 @@ const UpcommingHours = () => {
       </div>
       <div className={classes.chartContainer}>
         <div className={classes["data-container"]}>
-          <div className={classes.data}>
-            <p>Now</p>
-            <WbSunnyOutlinedIcon />
-            <p>27</p>
-          </div>
-          <div className={classes.data}>
-            <p>Now</p>
-            <WbSunnyOutlinedIcon />
-            <p>27</p>
-          </div>
-          <div className={classes.data}>
-            <p>Now</p>
-            <WbSunnyOutlinedIcon />
-            <p>27</p>
-          </div>
-          <div className={classes.data}>
-            <p>Now</p>
-            <WbSunnyOutlinedIcon />
-            <p>27</p>
-          </div>
-          <div className={classes.data}>
-            <p>Now</p>
-            <WbSunnyOutlinedIcon />
-            <p>27</p>
-          </div>
-          <div className={classes.data}>
-            <p>Now</p>
-            <WbSunnyOutlinedIcon />
-            <p>27</p>
-          </div>
-          <div className={classes.data}>
-            <p>Now</p>
-            <WbSunnyOutlinedIcon />
-            <p>27</p>
-          </div>
+          {chartData.labels.map((temp) => (
+            <div className={classes.data} key={temp.id}>
+              <p>{temp.time}</p>
+              <WbSunnyOutlinedIcon />
+              <p>{temp.temperature}°</p>
+            </div>
+          ))}
         </div>
         <LineChart chartData={chartData} />
         <div className={classes["degree-container"]}>
-          <div className={classes.degree}>
-            <p>27</p>
-          </div>
-          <div className={classes.degree}>
-            <p>27</p>
-          </div>
-          <div className={classes.degree}>
-            <p>27</p>
-          </div>
-          <div className={classes.degree}>
-            <p>27</p>
-          </div>
-          <div className={classes.degree}>
-            <p>27</p>
-          </div>
-          <div className={classes.degree}>
-            <p>27</p>
-          </div>
-          <div className={classes.degree}>
-            <p>27</p>
-          </div>
+          {chartData.labels.map((prob) => (
+            <div className={classes.degree} key={prob.id}>
+              <p>{prob.probability}%</p>
+            </div>
+          ))}
         </div>
       </div>
     </div>

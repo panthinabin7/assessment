@@ -12,9 +12,7 @@ const Right = () => {
       <div className={classes.upcomming}>
         <UpcommingHours />
       </div>
-      <div>
-        <MoreDetails />
-      </div>
+      <MoreDetails />
     </div>
   );
 };

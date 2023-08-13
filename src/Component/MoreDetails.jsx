@@ -11,7 +11,7 @@ import WaterDropOutlinedIcon from "@mui/icons-material/WaterDropOutlined";
 
 import { SpeedoMeter } from "./SpeedoMeter";
 
-const humidityTestData = { bgcolor: "#6a1b9a", humidity: 80 };
+const humidityTestData = { bgcolor: "#6a1b9a", humidity: 50 };
 
 const presentation = function (data) {
   if (data >= 33 && data < 66) {
@@ -48,11 +48,11 @@ const percentage = {
   //     : `${0 - humidityTestData.humidity}`
   // ),
 };
-console.log(percentage.first);
 
 const MoreDetails = () => {
   return (
     <div className={classes["card-container"]}>
+      {/* Humidity */}
       <Card>
         <div className={classes["title-container"]}>
           <div className={classes.title}>
@@ -90,7 +90,7 @@ const MoreDetails = () => {
       {/* Wind */}
       <Card>
         <div className={classes["wind-container"]}>
-          <div className={classes.windTitle}>
+          <div className={classes.title}>
             <p>Wind</p>
             <AirOutlinedIcon />
           </div>
@@ -104,8 +104,8 @@ const MoreDetails = () => {
       </Card>
       {/* Percipitation */}
       <Card>
-        <div className={classes["wind-container"]}>
-          <div className={classes.windTitle}>
+        <div className={classes["title-container"]}>
+          <div className={classes.title}>
             <p>Perciptation</p>
             <ThunderstormIcon />
           </div>
@@ -139,8 +139,8 @@ const MoreDetails = () => {
       </Card>
       {/* UV index */}
       <Card>
-        <div className={classes["wind-container"]}>
-          <div className={classes.windTitle}>
+        <div className={classes["title-container"]}>
+          <div className={classes.title}>
             <p>UV index</p>
             <WbSunnyOutlinedIcon />
           </div>
@@ -174,8 +174,8 @@ const MoreDetails = () => {
       </Card>
       {/* feels like */}
       <Card>
-        <div className={classes["wind-container"]}>
-          <div className={classes.windTitle}>
+        <div className={classes["title-container"]}>
+          <div className={classes.title}>
             <p>Feels Like</p>
             <ThermostatOutlinedIcon />
           </div>
@@ -190,21 +190,22 @@ const MoreDetails = () => {
                 </div>
                 <CustomizedProgressBars
                   width={200}
-                  value={percentage?.third * 2 || 0}
+                  value={humidityTestData.humidity}
                 />
               </div>
             </div>
           </div>
         </div>
       </Card>
+      {/* chance of rain */}
       <Card>
-        <div className={classes["wind-container"]}>
-          <div className={classes.windTitle}>
+        <div className={classes["title-container"]}>
+          <div className={classes.title}>
             <p>Chance of Rain</p>
             <WaterDropOutlinedIcon />
           </div>
           <div className={classes.mid}>
-            <h3>{humidityTestData.humidity}°</h3>
+            <h3>{humidityTestData.humidity}%</h3>
             <div className={classes.progressBar}>
               <div className={classes["progress-container"]}>
                 <div className={classes["paragraph-container"]}>
@@ -216,7 +217,7 @@ const MoreDetails = () => {
                 </div>
                 <CustomizedProgressBars
                   width={200}
-                  value={percentage?.third * 2 || 0}
+                  value={humidityTestData.humidity}
                 />
               </div>
             </div>
@@ -224,6 +225,7 @@ const MoreDetails = () => {
         </div>
       </Card>
     </div>
+    // <TryCard data={detailData} />
   );
 };
 
